@@ -1,5 +1,7 @@
+
 body {
-    background-image: url(corner-building-for-4k-white-background-tsx7c82luhg36ygy.jpg);
+    background-image: url('vector-background-geometry-shapes-wallpaper-preview.jpg');
+    /* Resmin dosya yolunu belirtin */
     background-size: cover;
     /* Resmin sayfanın tamamını kaplamasını sağlar */
     background-position: center;
@@ -8,75 +10,48 @@ body {
     /* Resmin tekrarlanmasını engeller */
 }
 
-
-
-.main{
-    justify-content: center;
-    align-items: center;
-}
-.slider{
-    width: 30%;
-    position: relative;
-}
-
-
-
-
-
-
-
-/* Küçük ekranlar için metin boyutunu küçült */
-@media (max-width: 768px) {
-    .tanıtım {
-        font-size: 12px;
-    }
-}
-
-/* Daha küçük ekranlar için metin boyutunu daha da küçült */
-@media (max-width: 576px) {
-    .tanıtım {
-        font-size: 9px;
-    }
-}
-
-.sehrim {
+.bursaspor{
     margin: 20px auto;
     width: 90%;
     margin-top: 120px;
     padding: 20px;
 }
 
-.h {
-    color: green;
+.baslik{
+    color:#08843c;
 }
 
-.h2{
-    color: goldenrod;
-}
-
-.tanıtım {
+p{
+    color: aliceblue;
     font-size: 18px;
-    font-weight: 500;
-    color: #000;
 }
 
-.uyarı {
-    color: red;
-    font-weight: 500;
+@media (max-width: 576px) {
+    .baslik {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 11px;
+    }
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
+@media (min-width: 576px) and (max-width: 992px) {
+    .baslik {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 14px;
+    }
 }
 
-.col {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin: 5px;
-    text-align: center;
-}
+
+
+
+
+
+
 
 
 
