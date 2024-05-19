@@ -20,11 +20,6 @@ body {
 }
 
 
-
-
-
-
-
 /* Küçük ekranlar için metin boyutunu küçült */
 @media (max-width: 768px) {
     .tanıtım {

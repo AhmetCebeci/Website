@@ -1,0 +1,234 @@
+/* Webkit tabanlı tarayıcılar (Chrome, Safari, Edge) için scrollbar stilini özelleştirme */
+textarea::-webkit-scrollbar {
+    width: 12px; /* Scrollbar genişliği */
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Scrollbar arka plan rengi */
+    border-radius: 10px; /* Scrollbar köşelerini yuvarlama */
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #b33939; /* Scrollbar tutamaç rengi */
+    border-radius: 10px; /* Scrollbar köşelerini yuvarlama */
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #cc8e35; /* Hover durumunda scrollbar tutamaç rengi */
+}
+
+/* Firefox için scrollbar stilini özelleştirme */
+textarea {
+    scrollbar-width: thin; /* Scrollbar genişliği */
+    scrollbar-color: #b33939 #cc8e35; /* Scrollbar tutamaç ve arka plan rengi */
+}
+
+body {
+    background-image: url('bg.png');
+    /* Resmin dosya yolunu belirtin */
+    background-size: cover;
+    /* Resmin sayfanın tamamını kaplamasını sağlar */
+    background-position: center;
+    /* Resmi sayfanın ortasına hizalar */
+    background-repeat: no-repeat;
+    /* Resmin tekrarlanmasını engeller */
+}
+
+.uyarı{
+    font-size: 14px;
+    color: #33d9b2;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: url(bgcontact.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+::placeholder{
+    color: #33d9b2;
+}
+form{
+    background: #b33939;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,.8);
+    width: 700px;
+    height:1000px;
+}
+form h1{
+    margin-top: 20px;
+    font-size: 60px;
+    color: #ffb142;
+    margin-bottom: 35px;    
+}
+
+form input,form textarea{
+    border: none;
+    background: none;
+    text-align: center;
+    outline: none;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    height: 60px;
+    width: 70%;
+    border-radius: 50px;
+    transition: 0.2s ease-in;
+}
+
+textarea{
+    height: 100px;
+    overflow: initial;
+}
+
+form input[type="email"],form input[type="text"],form textarea{
+    border: solid 2px #ffb142;
+}
+
+form input[name="mesaj"]{
+    height: 150px;
+}
+form input[type="button"],input[type="reset"]{
+    border: solid 2px #ffb142 ;
+    box-sizing: border-box;
+    height:65px;
+    width:40% ;
+    cursor: pointer;
+}
+
+form input[type="email"]:focus,form input[type="text"]:focus,form textarea:focus{
+    width: 85%;
+    border: solid 2px #cc8e35;
+}
+
+form input[type="button"]:hover,input[type="reset"]:hover{
+    background: #cc8e35;
+    color: #b33939;
+}
+
+/* Medya sorguları */
+@media screen and (max-width: 767px) {
+    form {
+        width: 90%; /* 767 pikselden küçük ekranlar için genişlik ayarı */
+        max-width: 300px; /* Maksimum genişlik belirledik */
+    }
+
+    form h1 {
+        font-size: 40px; /* Başlık boyutunu küçülttük */
+    }
+
+    form input {
+        padding: 15px; /* Input alanlarının yüksekliğini ve boşluğunu azalttık */
+    }
+
+    form input[type="submit"] {
+        height: 50px; /* Gönder butonunun yüksekliğini azalttık */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    background-color: #16a085;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    z-index: 1000;
+    /* Navbar'ı üstte tut */
+}
+
+.nav-item {
+    font-size: 23px;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: #000;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #ecf0f1;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000;
+}
+
+
+@media (min-width:993px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #2c3e50;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
